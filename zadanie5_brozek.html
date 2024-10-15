@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Kamil Brożek 3F</title>
+        <meta charset="utf-8">
+        <style>
+            .przyciski{
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+            }
+        </style>
+        <script language="JavaScript">
+            function WinOpen_g1()
+            {
+                window.open("grafika1.html","okienko_g1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=450,left=300");
+            }
+            function WinOpen_g2()
+            {
+                window.open("grafika2.html","okienko_g2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=300,left=500");
+            }
+            function WinOpen_g3()
+            {
+                window.open("grafika3.html","okienko_g3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=150,left=700");
+            }
+            function WinOpen_g4()
+            {
+                window.open("grafika4.html","okienko_g4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=0,left=900");
+            }
+            function okno_zamknij()
+            {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <p style="color: red; font-size: 20pt;padding: 5px;text-align: center;">
+            <b>
+				wykonał: Kamil Brożek 3F numer dziennika 3, czyli mam układ [(3) mod 4 = 3] układ 3
+            </b>
+        </p>
+        <div class="przyciski">
+            <form>
+                <input type="button" name="przycisk" value="grafika1" onclick="WinOpen_g1(' ')">
+                <input type="button" name="przycisk" value="grafika2" onclick="WinOpen_g2(' ')">
+                <input type="button" name="przycisk" value="grafika3" onclick="WinOpen_g3(' ')">
+                <input type="button" name="przycisk" value="grafika4" onclick="WinOpen_g4(' ')">
+                
+            </form>
+        </div>
+        <br><br><br><br><br><br><br>
+        <div class="przyciski">
+            <form>
+                <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+            </form>
+        </div>
+    </body>
+</html>
