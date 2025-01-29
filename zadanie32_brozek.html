@@ -1,0 +1,27 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function auto(marka_k,model_k,rokprod_k)//początek konstruktora
+{
+this.marka=marka_k;
+this.model=model_k;
+this.rokprod=rokprod_k;
+}//koniec konstruktora
+ auto.prototype.wypisz = function () //definicja metody
+ {
+ alert(this.marka + ' ' + this.model+ ' ' + this.rokprod);
+ };
+var samochod1 = new auto("Skoda", "Fabia", "2007"); // nowy obiekt samochod1
+var samochod2 = new auto('Volkswagen', 'Golf', '2002');
+samochod1.wypisz(); // uruchomienie metody wypisz() dotyczącej samochodu 1
+samochod2.wypisz();
+ document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól samochodu1
+ document.write("samochód pierwszy"+" "+samochod1.marka+" "+samochod1.model+" "+samochod1.rokprod);
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe Kamil Brożek 3F
+</body>
+</html>
