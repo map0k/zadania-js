@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function AB_broz() {
+             let aX_broz = parseFloat(document.getElementById('aX').value);
+             let aY_broz = parseFloat(document.getElementById('aY').value);
+             let bX_broz = parseFloat(document.getElementById('bX').value);
+             let bY_broz = parseFloat(document.getElementById('bY').value);
+              document.getElementById("odpowiedz").innerHTML = "AB= "
+                + (Math.sqrt((aX_broz - bX_broz) ** 2 + (aY_broz - bY_broz) ** 2)).toFixed(2);
+            }
+        
+		    function AC_broz() {
+             let aX_broz = parseFloat(document.getElementById('bX').value);
+             let aY_broz = parseFloat(document.getElementById('bY').value);
+             let cX_broz = parseFloat(document.getElementById('cX').value);
+             let cY_broz = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "AC= "
+                + (Math.sqrt((aX_broz - cX_broz) ** 2 + (aY_broz - cY_broz) ** 2)).toFixed(2);
+			}
+			function BC_broz() {
+             let bX_broz = parseFloat(document.getElementById('bX').value);
+             let bY_broz = parseFloat(document.getElementById('bY').value);
+             let cX_broz = parseFloat(document.getElementById('cX').value);
+             let cY_broz = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "BC= "
+                + (Math.sqrt((bX_broz - cX_broz) ** 2 + (cY_broz - cY_broz) ** 2)).toFixed(2);
+            }
+        </script>
+        <h1>ZADANIE 20 BROŻEK</h1><br><br>
+          Podaj X punktu A: <input type="text" id="aX"><br>
+          Podaj Y punktu A: <input type="text" id="aY"><br>
+          Podaj X punktu B: <input type="text" id="bX"><br>
+          Podaj Y punktu B: <input type="text" id="bY"><br>
+          Podaj X punktu C: <input type="text" id="cX"><br>
+          Podaj Y punktu C: <input type="text" id="cY"><br>
+        <input type="button" value="Oblicz wartość AB" Onclick="AB_broz()"><br><br>
+        <input type="button" value="Oblicz wartość BC" Onclick="BC_broz()"><br><br>
+        <input type="button" value="Oblicz wartość AC" Onclick="AC_broz()"><br><br>
+        <div id="odpowiedz"></div>
+    </body>
+</html>
