@@ -1,0 +1,35 @@
+<textarea><!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Użycie funkcji</title>
+        </head>
+        <body>
+            <div style="color:navy;font-size:50px;">
+                <script language="JavaScript">
+                    var a=parseFloat(prompt("a=",""));
+                    var b=parseFloat(prompt("b=",""));
+                    function suma_broz(a, b) {
+                    return a + b;
+                    }
+                    function roznica_broz(a, b) {
+                    return a - b;
+                    }
+                    function iloczyn_broz(a, b) {
+                    return a * b;
+                    }
+                    function potega_broz(a, b) {
+                    return Math.pow(a, b);
+                    }
+                    function modulo_broz(a, b) {
+                    return a % b;
+                    }
+                    document.write("suma="+suma_broz(a,b)+"<br>");
+                    document.write("różnica="+roznica_broz(a,b)+"<br>");
+                    document.write("iloczyn="+iloczyn_broz(a,b)+"<br>");
+                    document.write("potęga="+potega_broz(a,b)+"<br>");
+                    document.write("modulo="+modulo_broz(a,b)+"<br>");
+                </script>
+            </div>
+        </body>
+    </html></textarea>

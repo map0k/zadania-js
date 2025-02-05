@@ -1,0 +1,120 @@
+<textarea><!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                table, th, td {
+                    border: 1px solid;
+                }
+                textarea {
+                    width: 75%;
+                    height: 250px;
+                }
+            </style>
+        </head>
+        <body>
+            <h3>
+                1.Podaj cztery sposoby wyprowadzania wyników w JS
+            </h3>
+            <ul>
+                <li>
+                    za pomocą dokument.write()
+                </li>
+                <li>
+                    za pomocą okna alert()
+                </li>
+                <li>
+                    do okien formularza
+                </li>
+                <li>
+                    do tabeli
+                </li>
+            </ul>
+            <h3>
+                2.Czym jest funkcja w JS, omów przy użyciu czterech punktów?
+            </h3>
+            <ul>
+                <li>
+                    Jest to zbiór zorganizowanych instrukcji, które możemy uruchamiać poprzez wskazanie ich nazwy
+                </li>
+                <li>
+                    Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod
+                </li>
+                <li>
+                    Funkcja może przyjmować argumenty, które przechodzą do wnętrza funkcji i są tam przetwarzane, np. suma_kry(a, b)
+                </li>
+                <li>
+                    Może (choć nie zawsze) zwrócić wynik obliczeń zapisany po słowie kluczowym return
+                </li>
+            </ul>
+            <h3>
+                3.Opis metod getElementsByName, getElementById, getElementByTagName:
+            </h3>
+            <table>
+                <tr>
+                    <th>
+                        Metoda
+                    </th>
+                    <th>
+                        opis
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        getElementById("id ")
+                    </td>
+                    <td>
+                        dostęp do wszystkich elementów o konkretnej wartości atrybutu id
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        getElementByTagName("znacznik ")
+                    </td>
+                    <td>
+                        dostęp do wszystkich elementów o typie znacznika, np. P lub DIV
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        getElementByName("nazwa")
+                    </td>
+                    <td>
+                        dostęp do wszystkich elementów o konkretnej wartości atrybutu
+                    </td>
+                </tr>
+            </table>
+            <h3>
+                4.Właściwości pobranego elementu to:
+            </h3>
+            <ul>
+                <li>
+                    innerHTML – jest to właściwość, która umożliwia odczyt, modyfikację, wstawianie lub usuwanie kodu HTML z danego elementu HTML, np. w tabeli
+                </li>
+                <li>
+                    innerText – pozwala określić ciąg znaków, który ma zostać umieszczony w elemencie
+                </li>
+                <li>
+                    className – umożliwia przypisanie klasy CSS użytej do stylizacji elementu
+                </li>
+            </ul>
+            <textarea>
+    <!DOCTYPE html>
+        <head>
+            <title> Przykłady dostępu do elementów </title>
+            <meta charset="utf-8">
+            <style type="text/css">
+                .wyroznienieCzerwone { color: Red; font-weight: 600; }
+            </style>
+        </head>
+        <body>
+            <div id="nazwa"></div>
+                <script>
+                    document.getElementById("nazwa").innerHTML = "Witaj";
+                    document.getElementById("nazwa").className = "wyroznienieCzerwone";
+                </script>
+        </body>
+            </textarea>
+        </body>
+    </html>
+    </textarea>
