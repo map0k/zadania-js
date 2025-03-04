@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23</title>
+    <script>
+        function oblicz() {
+            var D = parseFloat(document.getElementById('wysokosc_oparcia').value);
+            var X = parseFloat(document.getElementById('odleglosc_oparcia').value);
+            var dlugoscDrabiny = obliczDlugoscDrabiny(D, X);
+            var katNachylenia = obliczKatNachylenia(D, X);
+            document.getElementById('dlugosc_drabiny').value = dlugoscDrabiny.toFixed(2) + " m";
+            document.getElementById('kat_nachylenia').value = katNachylenia.toFixed(2) + "°";
+        }
+        function obliczDlugoscDrabiny(D, X) {
+            return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
+        }
+        function obliczKatNachylenia(D, X) {
+            return Math.atan(D / X) * (180 / Math.PI);
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długość i kąt nachylenia drabiny</h1>
+    <label for="wysokosc_oparcia">Wysokosc oparcia drabiny (D):</label>
+    <input type="number" id="wysokosc_oparcia" placeholder="D"><br>
+    <label for="odleglosc_oparcia">Odległość oparcia drabiny (X): </label>
+    <input type="number" id="odleglosc_oparcia" placeholder="X"><br>
+    <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+    <label for="dlugosc_drabiny">Długość drabiny: </label>
+    <input type="text" id="dlugosc_drabiny" readonly><br>
+    <label for="kat_nachylenia">Kąt nachylenia drabiny: </label>
+    <input type="text" id="kat_nachylenia" readonly><br>
+</body>
+
+</html>

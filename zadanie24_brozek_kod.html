@@ -1,0 +1,36 @@
+<textarea>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 24</title>
+    <style>
+        #wynik {
+            margin-top: 20px;
+            white-space: pre-line;
+            background: lightgray;
+            padding: 10px;
+            color: blue;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="wynik"></div>
+
+    <script>
+        let x1_broz = parseFloat(prompt("Podaj x1 w stopniach:"));
+        let x2_broz = parseFloat(prompt("Podaj x2:"));
+
+        let wynikDiv = document.getElementById("wynik");
+        wynikDiv.innerHTML = `x1 = ${x1_broz} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2 = ${x2_broz} <br>`;
+        wynikDiv.innerHTML += `x1 = ${x1_broz} &nbsp;&nbsp;&nbsp; x1 = ${(x1_broz * Math.PI / 180).toFixed(2)}<br>`;
+
+
+        let x1_radiany = (x1_broz * Math.PI) / 180;
+    </script>
+</body>
+
+</html>
+</textarea>

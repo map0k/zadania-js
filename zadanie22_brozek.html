@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 22</title>
+    <script>
+        function oblicz() {
+            var a_broz = parseFloat(document.getElementById('a_dana_broz').value);
+            var b_broz = parseFloat(document.getElementById('b_dana_broz').value);
+            Pole_brozek(a_broz, b_broz);
+            obwod_brozek(a_broz, b_broz);
+        }
+        function Pole_brozek(a_broz, b_broz) {
+            var pole = a_broz * b_broz;
+            document.getElementById('wyprowadz_pole_broz').value = pole.toFixed(2) + " cm²";
+        }
+
+        function obwod_brozek(a_broz, b_broz) {
+            var obwod = 2 * (a_broz + b_broz);
+            document.getElementById('wyprowadz_obwod_broz').value = obwod.toFixed(2) + " cm";
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz pole i obwód prostokąta</h1>
+    <input type="number" id="a_dana_broz" placeholder="a"> a cm<br>
+    <input type="number" id="b_dana_broz" placeholder="b"> b cm<br>
+    <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+    <label for="wyprowadz_pole_broz">Pole: </label>
+    <input type="text" id="wyprowadz_pole_broz" readonly><br>
+    <label for="wyprowadz_obwod_broz">Obwód: </label>
+    <input type="text" id="wyprowadz_obwod_broz" readonly><br>
+</body>
+</html>

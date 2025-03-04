@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obliczenia lotu samolotu</title>
+    <script>
+        function wysokosc_brozalski(odl_broz, s_broz) {
+            odl_broz = parseFloat(odl_broz);
+            s_broz = parseFloat(s_broz);
+            let h_broz = Math.sqrt(Math.pow(s_broz, 2) - Math.pow(odl_broz, 2));
+            document.getElementsByName('wysokosc')[0].value = h_broz.toFixed(2);
+        }
+
+        function kat_startu_brozalski(odl_broz, s_broz) {
+            odl_broz = parseFloat(odl_broz);
+            s_broz = parseFloat(s_broz);
+            let kat_broz = Math.asin(odl_broz / s_broz) * (180 / Math.PI);
+            document.getElementsByName('kat')[0].value = kat_broz.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+        <p>Artur i Dawid stoją w odległości <b>odl_broz</b>. Artur jest na lotnisku, z którego startuje samolot pod kątem
+            <b>kat_broz</b>. Gdy samolot znajduje się pionowo nad Dawidem, przebył drogę <b>s_broz</b>. Oblicz wysokość
+            <b>h_broz</b> oraz kąt startu.
+        </p>
+        <form
+            onsubmit="wysokosc_brozalski(this.odl_broz.value, this.s_broz.value); kat_startu_brozalski(this.odl_broz.value, this.s_broz.value); return false;">
+            <label>Podaj odległość Dawida od lotniska (odl_broz):</label>
+            <input type="text" name="odl_broz" size="6"> <br><br>
+
+            <label>Podaj przebytą drogę samolotu (s_broz):</label>
+            <input type="text" name="s_broz" size="6"> <br><br>
+
+            <input type="submit" value="Oblicz"> <br><br>
+
+            <label>Wysokość samolotu (h_broz):</label>
+            <input type="text" name="wysokosc" size="6" readonly> <br><br>
+
+            <label>Kąt startu samolotu (kat_broz):</label>
+            <input type="text" name="kat" size="6" readonly> <br><br>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 26</title>
+    <script>
+                function Obw_brozek(a, b, h) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            h = parseFloat(h);
+            let ramie = Math.sqrt(Math.pow((Math.abs(a - b) / 2), 2) + Math.pow(h, 2));
+            let obwod = a + b + 2 * ramie;
+            document.getElementsByName('obwod')[0].value = obwod.toFixed(2);
+        }
+        function Pow_brozek(a, b, h) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            h = parseFloat(h);
+            let pole = ((a + b) / 2) * h;
+            document.getElementsByName('pole')[0].value = pole.toFixed(2);
+        }
+    </script>
+</head>
+<body>        <h2>Oblicz pole i obwód trapezu równoramiennego</h2>
+        <form
+            onsubmit="Pow_brozek(this.a.value, this.b.value, this.h.value); Obw_brozek(this.a.value, this.b.value, this.h.value); return false;">
+            Podaj długość górnej podstawy (a) = <input type="text" name="a" size="6"> <br><br>
+            Podaj długość dolnej podstawy (b) = <input type="text" name="b" size="6"> <br><br>
+            Podaj wysokość (h) = <input type="text" name="h" size="6"> <br><br>
+            <input type="submit" value="Oblicz"> <br><br>
+            Pole = <input type="text" name="pole" size="6" readonly> <br><br>
+            Obwód = <input type="text" name="obwod" size="6" readonly> <br><br>
+        </form>
+</body>
+</html>

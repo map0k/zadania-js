@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Odpowiedzi na pytania</title>
+</head>
+<body>
+    <h1>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h1>
+    <p>
+        <strong>Bezpośrednie przypisanie:</strong> Można przypisać wartość do właściwości obiektu bezpośrednio. Na
+        przykład:
+    <pre>
+        <code>
+        let samochod = {
+            kolor: 'żółty',
+            marka: 'Skoda'
+        };
+        console.log(samochod.kolor); // żółty
+        </code>
+        </pre>
+    <strong>Użycie metody:</strong> Można użyć metody do ustawienia wartości właściwości. Na przykład:
+    <pre>
+        <code>
+        let samochod = {
+            kolor: 'żółty',
+            ustawKolor: function(nowyKolor) {
+                this.kolor = nowyKolor;
+            }
+        };
+        samochod.ustawKolor('niebieski');
+        console.log(samochod.kolor); // niebieski
+        </code>
+        </pre>
+    </p>
+
+    <h1>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+    <p>
+        <strong>Odwołanie do właściwości:</strong> Można odwołać się do właściwości obiektu za pomocą notacji kropkowej
+        lub nawiasowej. Na przykład:
+    <pre>
+        <code>
+        let samochod = {
+            kolor: 'żółty'
+        };
+        console.log(samochod.kolor); // żółty
+        console.log(samochod['kolor']); // żółty
+        </code>
+        </pre>
+    <strong>Odwołanie do metod:</strong> Można odwołać się do metod obiektu za pomocą notacji kropkowej. Na przykład:
+    <pre>
+        <code>
+        let samochod = {
+            kolor: 'żółty',
+            pokazKolor: function() {
+                console.log(this.kolor);
+            }
+        };
+        samochod.pokazKolor(); // żółty
+        </code>
+        </pre>
+    </p>
+
+    <h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+    <p>
+    <ul>
+        <li>Konstruktor jest specjalną metodą wywoływaną podczas tworzenia nowego obiektu.</li>
+        <li>Konstruktor może inicjalizować właściwości obiektu.</li>
+        <li>Konstruktor nie zwraca wartości.</li>
+        <li>W klasie może być tylko jeden konstruktor.</li>
+    </ul>
+    </p>
+
+    <h1>4. Konstruowanie obiektu na podstawie przykładu obiekt ma trzy pola oraz jedną metodę.</h1>
+    <p>
+    <pre>
+        <code>
+        class Samochod {
+            constructor(marka, kolor, rok) {
+                this.marka = marka;
+                this.kolor = kolor;
+                this.rok = rok;
+            }
+            pokazInformacje() {
+                console.log(`Marka: ${this.marka}, Kolor: ${this.kolor}, Rok: ${this.rok}`);
+            }
+        }
+        let mojSamochod = new Samochod('Skoda', 'żółty', 2020);
+        mojSamochod.pokazInformacje(); // Marka: Skoda, Kolor: żółty, Rok: 2020
+        </code>
+        </pre>
+    </p>
+
+    <h1>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+    <p>
+        <strong>Słowo kluczowe this:</strong> Odnosi się do bieżącego obiektu, na którym metoda jest wywoływana.
+        <br>
+        <strong>Oddzielanie pól i metod:</strong> Pola i metody są oddzielane w definicji klasy. Pola są zmiennymi, a
+        metody są funkcjami. Na przykład:
+    <pre>
+        <code>
+        class Samochod {
+            constructor(marka, kolor) {
+                this.marka = marka;
+                this.kolor = kolor;
+            }
+            pokazKolor() {
+                console.log(this.kolor);
+            }
+        }
+        </code>
+        </pre>
+    </p>
+
+    <h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+    <p>
+    <pre>
+        <code>
+        class Samochod {
+            constructor(marka, kolor) {
+                this.marka = marka;
+                this.kolor = kolor;
+            }
+        }
+        let mojSamochod = new Samochod('Skoda', 'żółty');
+        console.log(mojSamochod.marka); // Skoda
+        console.log(mojSamochod.kolor); // żółty
+        </code>
+        </pre>
+    </p>
+
+    <h1>7. Znaczenie słowa kluczowego New wraz z przykładem.</h1>
+    <p>
+        <strong>Słowo kluczowe new:</strong> Służy do tworzenia nowych instancji obiektów na podstawie klasy. Na
+        przykład:
+    <pre>
+        <code>
+        class Samochod {
+            constructor(marka, kolor) {
+                this.marka = marka;
+                this.kolor = kolor;
+            }
+        }
+        let mojSamochod = new Samochod('Skoda', 'żółty');
+        console.log(mojSamochod.marka); // Skoda
+        console.log(mojSamochod.kolor); // żółty
+        </code>
+        </pre>
+    </p>
+
+    <h1>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</h1>
+    <p>
+        <strong>Słowo kluczowe prototype:</strong> Służy do dodawania metod do wszystkich instancji obiektu utworzonych
+        na podstawie danej klasy. Na przykład:
+    <pre>
+        <code>
+        function Samochod(marka, kolor) {
+            this.marka = marka;
+            this.kolor = kolor;
+        }
+        Samochod.prototype.pokazKolor = function() {
+            console.log(this.kolor);
+        };
+        let mojSamochod = new Samochod('Skoda', 'żółty');
+        mojSamochod.pokazKolor(); // żółty
+        </code>
+        </pre>
+    </p>
+</body>
+
+</html>

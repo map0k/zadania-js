@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 25</title>
+</head>
+<body>
+  <div style="color: blue; font-size: 50px;">
+    <script>
+      var n_broz = parseFloat(prompt("N0= ", "sztuki"));
+      var t_broz = parseFloat(prompt("T= ", "lata"));
+      var t1t2_broz = parseFloat(prompt("T1/2=", "lata"));
+      function lambda(t1t2_broz) {
+        return (Math.log(2)) / t1t2_broz;
+      }
+      function euler(t_broz, n_broz) {
+        let potega = -t_broz * lambda(t1t2_broz);
+        let e = Math.pow(Math.E, potega);
+        return n_broz * e;
+      }
+      document.write("N0 = " + n_broz + " (sztuk) <br>");
+      document.write("t = " + t_broz + " (lat) <br>");
+      document.write("T1/2 = " + t1t2_broz + " (lat) <br>");
+      document.write("Lambda = " + lambda(t1t2_broz).toFixed(7) + " (1/rok) <br>");
+      document.write("N = " + euler(t_broz, n_broz).toFixed(7) + " (sztuk) ");
+    </script>
+  </div>
+</body>
+</html>
