@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 38</title>
+    <script>
+        function sprawdz() {
+            var opcja = prompt("Podaj opcję: ", "");
+            alert("Wybrano opcję: " + opcja);
+        }
+    </script>
+</head>
+<script>
+    var imie = prompt("Wpisz swoje imię: ", "");
+    var nazwisko = prompt("Wpisz swoje nazwisko: ", "");
+    var rok = parseInt(prompt("Wpisz rok urodzenia: ", ""));
+    var miesiac = parseInt(prompt("Wpisz miesiąc urodzenia: ", ""));
+    var dzien = parseInt(prompt("Wpisz dzień urodzenia: ", ""));
+    var imie2 = imie.length;
+    var nazwisko2 = nazwisko.length;
+    var liczba1 = imie2;
+    var liczba2 = imie2 + 7;
+    var liczba3 = nazwisko2;
+    var liczba4 = nazwisko2 + 4;
+    document.write("<font color='green' size='2'>Moje nazwisko to: " + imie + " " + nazwisko + "</font><br>");
+    document.write("<font color='green' size='2'>Liczba1: " + liczba1 + "</font><br>");
+    document.write("<font color='green' size='2'>Liczba2: " + liczba2 + "</font><br>");
+    document.write("<font color='green' size='2'>Liczba3: " + liczba3 + "</font><br>");
+    document.write("<font color='green' size='2'>Liczba4: " + liczba4 + "</font><br>");
+    document.write("<font color='red' size='2'>----------------MENU----------------</font><br>");
+    document.write("<font color='red' size='2'>" + liczba1 + " - Wyświetlanie teorii o operatorach</font><br>");
+    document.write("<font color='red' size='2'>" + (liczba3 + 20) + " - Czy liczba należy do przedziału (" + liczba1 + "; " + liczba2 + ")</font><br>");
+    document.write("<font color='red' size='2'>" + (dzien + 50) + " - Czy liczba należy do przedziału (-∞ ; " + liczba3 + ") lub [" + liczba4 + " ; +∞)</font><br>");
+</script>
+<body style="background-color: silver">
+</body>
+</html>

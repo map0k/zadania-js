@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 39</title>
+</head>
+<body>
+    <h1 style="color: green">Menu</h1><br><br>
+    <h2 style="color: red"> 1 - Czerwony</h2>
+    <h2 style="color: blue"> 2 - Niebieski</h2>
+    <input type="button" name="broz" value="Sprawdź" onclick="fun_broz()" /> 
+  <script> 
+    function fun_broz() { 
+      var x_broz = prompt("Podaj kolor", ""); 
+        if(x_broz == 1 || x_broz.toLowerCase() == "Czerwony") { 
+        document.write('<h1 style="color:red;">Wczytałeś kolor czerwony!</h1><br />'); } 
+        else if(x_broz == 2 || x_broz.toLowerCase() == "Niebieski") { 
+        document.write('<h6 style="color:blue;">Wczytałeś kolor niebieski!</h6><br />'); 
+  } 
+  } 
+ </script> 
+</body>
+</html>

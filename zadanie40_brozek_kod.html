@@ -1,0 +1,97 @@
+<textarea>
+    <!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+ <title>Zadanie JavaScript</title> 
+ <meta charset="utf-8"> 
+</head> 
+<body>  
+ <h1>PROSTE DZIAŁANIA</h1>
+ <br><br> 
+ <h2>Brożek klasa 3F</h2>
+ <label for="a">Podaj pierwszą liczbę:</label> 
+ <input type="number" id="a"> 
+ <br><br> 
+ <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
+ <br><br> 
+
+ 
+ <input type="button" value="DODAWANIE" onclick="obliczsume()"> 
+ <input type="button" value="ODEJMOWANIE" onclick="obliczroznice()"> 
+ <input type="button" value="MNOŻENIE" onclick="oblicziloczyn()"> 
+ <input type="button" value="DZIELENIE" onclick="oblicziloraz()"> 
+ <div id="wynik" style="margin-top:20px;"></div> 
+
+
+ <script> 
+  function obliczsume() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+   document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var obliczsume = a + b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + obliczsume; 
+   } 
+  } 
+  function obliczroznice() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var obliczroznice = a - b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + obliczroznice; 
+   } 
+  } 
+  function oblicziloraz() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    if (b == 0) 
+    { 
+  document.getElementById("wynik").innerHTML = "Nie można dzielić przez zero."; 
+    } 
+    else 
+    {         
+     var oblicziloraz = a / b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + oblicziloraz; 
+    } 
+   } 
+  } 
+  function oblicziloczyn() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var oblicziloczyn = a * b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + oblicziloczyn; 
+   } 
+  }   
+</script> 
+</body> 
+</html> 
+</textarea>
