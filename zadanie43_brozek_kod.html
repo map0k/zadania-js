@@ -1,0 +1,31 @@
+<textarea>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43</title>
+</head>
+<body>
+    <h1>Kamil Brożek 3F - Program wypisze wszystkie liczby parzyste do końca podanej liczby
+    </h1>
+    <button onclick="wypiszParzyste()">Uruchom</button>
+    <p id="wynik"></p>
+    <script>
+        function wypiszParzyste() {
+            let koniec_petli_broz= prompt("Podaj liczbę końcową: ");
+            koniec_petli_broz= parseInt(koniec_petli_broz);
+            if (isNaN(koniec_petli_broz) || koniec_petli_broz< 2) {
+                alert("Podano nieprawidłową liczbę.");
+                return;
+            }
+            // Kamil Brożek 3F
+            let wynik = "Liczby parzyste: ";
+            for (let i_k = 2; i_k <= koniec_petli_broz; i_k += 2) {
+                wynik += i_k + " ";
+            }
+            document.getElementById("wynik").innerText = wynik;
+        }
+    </script>
+</body>
+</html>
+</textarea>
