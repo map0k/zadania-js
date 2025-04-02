@@ -5,7 +5,7 @@
     <title>Zadanie 44</title>
     <style>
         .text {
-            font-size: 44px;
+            font-size: 40px;
         }
     </style>
 </head>
@@ -14,14 +14,14 @@
     <div id="output"></div>
     <script>
         function wyswietl() {
-            let nazwisko = "Kamil";
-            let imie = "Brożek";
+            let nazwisko = "Brożek";
+            let imie = "Kamil";
             let liczbaLiterNazwiska = nazwisko.length;
             let iloscWyswietlen = (liczbaLiterNazwiska % 4) + 10;
             let wielkoscLiter = (liczbaLiterNazwiska % 3) + 40;
             
             let outputDiv = document.getElementById("output");
-            outputDiv.innerHTML = `<p>ilość wykonania pętli = ${iloscWyswietlen}</p>`;
+            outputDiv.innerHTML = `<p>ilość wykonania pętli zgodnie z nazwiskiem= ${iloscWyswietlen}</p>`;
             outputDiv.innerHTML += `<p>wielkość liter = ${wielkoscLiter}px</p>`;
             
             for (let i_broz = 1; i_broz <= iloscWyswietlen; i_broz++) {
