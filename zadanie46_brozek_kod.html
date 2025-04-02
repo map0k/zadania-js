@@ -1,0 +1,26 @@
+<textarea rows="7" cols="70">
+    <!DOCTYPE html>
+    <head>
+    <title>Sprawdzenie danych Brożek</title>
+    <meta charset="utf-8">
+    </head>
+   <body>
+   <div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+    do {
+   var liczba1=prompt("wysokość=","");
+    var h_broz=parseFloat(liczba1);
+    }
+    while ( h_broz<=0);
+    do {
+   var liczba1=prompt("podstawę=","");
+    var a_broz=parseFloat(liczba1);
+    }
+    while(!( a_broz>0));
+   var Pole=a_broz*h_broz/2;
+    document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>");
+    </script>
+   </div>
+   </body>
+   </html>
+</textarea>
