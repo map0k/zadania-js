@@ -1,0 +1,26 @@
+<textarea>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie trójkąta Brożek</title>
+    <script>
+        function checkTriangle() {
+            let a_broz, b_broz, c_broz;
+            do {
+                a_broz = parseFloat(prompt("Podaj pierwszy bok trójkąta (a):"));
+                b_broz = parseFloat(prompt("Podaj drugi bok trójkąta (b):"));
+                c_broz = parseFloat(prompt("Podaj trzeci bok trójkąta (c):"));
+            } while (!(a_broz > 0 && b_broz > 0 && c_broz > 0 && (a_broz + b_broz > c_broz) && (a_broz + c_broz > b_broz) && (b_broz + c_broz > a_broz)));
+            
+            document.getElementById("result").innerText = "Podane boki mogą tworzyć trójkąt.";
+        }
+    </script>
+</head>
+<body>
+    <h2>Sprawdzenie, czy boki tworzą trójkąt</h2>
+    <button onclick="checkTriangle()">Sprawdź trójkąt</button>
+    <p id="result"></p>
+</body>
+</html>
+
+</textarea>
