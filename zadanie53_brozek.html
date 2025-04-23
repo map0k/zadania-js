@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 53 Brożek</title>
+  <script>
+      var a_broz = parseInt(prompt("podaj wysokość prostokąta a="));
+    var b_broz = parseInt(prompt("podaj szerokość prostokąta b="));
+    for (var i = 0; i < b_broz; i++) {
+      document.write("*");
+    }
+    document.write("<br>");
+    var wiersz_broz = "*";
+    for (var i = 1; i <= (b_broz - 2); i++) {
+      wiersz_broz += "&nbsp&nbsp";
+    }
+    wiersz_broz += "*";
+    for (var j = 0; j < a_broz - 2; j++) {
+      document.write(wiersz_broz + "<br>");
+    }
+    for (var i = 0; i < b_broz; i++) {
+      document.write("*");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="utf-8">
+ <title>Zadanie 51 Brożek</title>
+ <script>
+   var powtorzenia = parseInt(prompt("ile razy powtórzyć="));
+   var inicjaly = prompt("podaj twoje inicjały=");
+
+   for (var i_broz = 1; i_broz <= powtorzenia; i_broz++) {
+       for (var j = 1; j <= i_broz; j++) {
+           document.write("&nbsp;");
+       }
+       document.write(i_broz + "_" + inicjaly + "_" + i_broz + "<br>");
+   }
+ </script>
+</head>
+<body>
+</body>
+</html>
