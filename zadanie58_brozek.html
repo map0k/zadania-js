@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 58 Brożek</title>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    const l1 = parseInt(prompt("podaj pierwszą liczbę:"));
+
+
+    const l2 = parseInt(prompt("podaj drugą liczbę:"));
+    
+    const output = document.getElementById("output");
+    if (l1 === l2) {
+      confirm("Liczby są równe – brak obliczeń.");
+    } else if (l1 < l2) {
+      for (let i = l1 + 1; i < l2; i++) {
+        if (i % 2 !== 0) {
+          output.innerHTML += `<p style="color: green; font-size: 20px;">${i}</p>`;
+        }
+      }
+    } else {
+      for (let i = l1 - 1; i > l2; i--) {
+        if (i % 2 !== 0) {
+          output.innerHTML += `<p style="color: blue; font-size: 10px;">${i}</p>`;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 59 Brożek</title>
+    <script>
+        function zamknijOknoBroz() {
+            window.close();
+        }
+
+        function policzPunktyBroz() {
+            let promienBroz;
+            do {
+                promienBroz = prompt("Podaj promień koła:", "");
+            } while (isNaN(promienBroz) || promienBroz < 0);
+
+            const promienLiczbaBroz = parseFloat(promienBroz);
+            const granicaBroz = Math.ceil(promienLiczbaBroz);
+            let licznikPunktowBroz = 0;
+
+            for (let xBroz = -granicaBroz; xBroz <= granicaBroz; xBroz++) {
+                for (let yBroz = -granicaBroz; yBroz <= granicaBroz; yBroz++) {
+                    const odlegloscBroz = xBroz * xBroz + yBroz * yBroz;
+                    if (odlegloscBroz <= promienLiczbaBroz * promienLiczbaBroz) {
+                        licznikPunktowBroz++;
+                    }
+                }
+            }
+
+            document.getElementById("wynikBroz").innerText = 
+                "Ilość punktów kratowych to: " + licznikPunktowBroz;
+        }
+
+        window.onload = policzPunktyBroz;
+    </script>
+</head>
+<body>
+    <p id="wynikBroz"></p>
+    <button onclick="zamknijOknoBroz()">Zamknij</button>
+</body>
+</html>
